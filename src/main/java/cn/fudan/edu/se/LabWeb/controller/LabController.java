@@ -134,10 +134,10 @@ public class LabController {
                 // Get the filename and build the local file path
                 String filename = name;
                 // Get newsPic Dir's path
-                Path newsPicDir = Paths.get("./../../../../../../static/img/newsPic/");
+                Path newsPicDir = Paths.get("./src/main/resources/static/img/newsPic/");
 //                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
 //                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/"
-                String filepath = Paths.get(newsPicDir.toAbsolutePath().toString(), filename).toString();
+                String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), filename).toString();
 
                 // Save the file locally
                 BufferedOutputStream stream =

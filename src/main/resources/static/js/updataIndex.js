@@ -22,22 +22,24 @@ function addfiles() {
 
 $("#newsButton").click(function () {
     event.preventDefault();
-    var title = $("#newsTitle").val();
-    var info = $("#newsInfo").val();
+    const title = $("#newsTitle").val();
+    let info = $("#newsInfo").val();
     info=info.replace(/\n|\r\n/g,"<br>");
-    var icon = $("input[name=newsIcon]:checked").val();
-    var month = new Date().getMonth();
-    month+=1;
-    var date = ""+ new Date().getFullYear() +"-"+ month +"-"+ new Date().getDate() +"";
+    const icon = $("input[name=newsIcon]:checked").val();
+    const date = $("#newsTime").val();
+    // const month = new Date().getMonth() + 1;
+    // const date = ""+ new Date().getFullYear() +"-"+ month +"-"+ new Date().getDate() +"";
+
     $.ajax({
         async:false,
         url:"/insertNewsInfo",
         type:"post",
-        data:{title:title,
+        data:{
+            title:title,
             CONTENT:info,
             ICON:icon,
             PUBDATE:date
-                },
+        },
         error: function (xhr, status, errorThrown) {
             alert("fail")
             console.log( "Error: " + errorThrown );
@@ -46,14 +48,11 @@ $("#newsButton").click(function () {
         },
         success:function (d) {
             uploadfiles(d);
-
             alert("更新完成")
-
         }
-
     })
 
-})
+});
 
 function uploadfiles(id) {
 

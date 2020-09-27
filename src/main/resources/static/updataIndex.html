@@ -65,44 +65,42 @@
             <div role="tabpanel" class="tab-pane active" id="home">
                 <div class="updataPanel">
                     <form id="uploadForm" enctype="multipart/form-data">
-                    <label for="newsTitle">动态标题</label>
-                    <input type="text" class="form-control" placeholder="新闻动态的标题" id="newsTitle">
-                    <br/>
-                    <label for="newsInfo">动态内容</label>
-                    <textarea wrap=hard class="form-control" rows="15" id="newsInfo" placeholder="新闻动态的内容"></textarea>
-                    <br/>
-                    <label>选择图标</label>
-                    <br/>
-                    <label class="radio-inline">
-                        <input type="radio" name="newsIcon" id="newsIcon1" value="fa fa-users" checked="checked"> <i class="fa fa-users"></i>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="newsIcon" id="newsIcon2" value="fa fa-trophy"> <i class="fa fa-trophy"></i>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="newsIcon" id="newsIcon3" value="fa fa-coffee"> <i class="fa fa-coffee"></i>
-                    </label>
+                        <label for="newsTitle">动态标题</label>
+                        <input type="text" class="form-control" placeholder="新闻动态的标题" id="newsTitle">
+                        <br/>
+                        <label for="newsTime">选择时间</label>
+                        <input style="width: 200px;"
+                                type="date" class="form-control" id="newsTime" placeholder="新闻动态的生成时间" />
+                        <br/>
+                        <label for="newsInfo">动态内容</label>
+                        <textarea wrap=hard class="form-control" rows="15" id="newsInfo" placeholder="新闻动态的内容"></textarea>
+                        <br/>
+                        <label>选择图标</label>
+                        <br/>
+                        <label class="radio-inline">
+                            <input type="radio" name="newsIcon" id="newsIcon1" value="fa fa-users" checked="checked"> <i class="fa fa-users"></i>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="newsIcon" id="newsIcon2" value="fa fa-trophy"> <i class="fa fa-trophy"></i>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="newsIcon" id="newsIcon3" value="fa fa-coffee"> <i class="fa fa-coffee"></i>
+                        </label>
                         <br/>
                         <p class="help-block">选择动态前面的图标</p>
 
-                    <br/>
+                        <br/>
                         <div id="fileuploaddiv">
                             <!--<form class="upload-file-form">-->
                                 <!--<input class="upload-file-input" type="file" name="uploadfile" accept="*" />-->
                             <!--</form>-->
-
                         </div>
 
 
-                    <br/>
-                    <button type="submit" class="btn btn-default" id="newsButton">Submit</button>
+                        <br/>
+                        <button type="submit" class="btn btn-default" id="newsButton">Submit</button>
                     </form>
                 </div>
-
-
-
-
-
                     <!--<div id="fileuploaddiv">-->
 
                     <!--<form class="upload-file-form">-->
