@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -132,9 +133,11 @@ public class LabController {
             try {
                 // Get the filename and build the local file path
                 String filename = name;
-                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
-//                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
-                String filepath = Paths.get(directory, filename).toString();
+                // Get newsPic Dir's path
+                Path newsPicDir = Paths.get("./../../../../../../static/img/newsPic/");
+//                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
+//                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/"
+                String filepath = Paths.get(newsPicDir.toAbsolutePath().toString(), filename).toString();
 
                 // Save the file locally
                 BufferedOutputStream stream =
