@@ -5,18 +5,16 @@ import java.io.*;
 import cn.fudan.edu.se.LabWeb.domain.*;
 import cn.fudan.edu.se.LabWeb.service.LabService;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -112,7 +110,7 @@ public class LabController {
     @Controller
     public class MainController {
 
-
+        Logger logger = LoggerFactory.getLogger(MainController.class);
 
 
         /**
@@ -134,7 +132,7 @@ public class LabController {
                 // Get the filename and build the local file path
                 String filename = name;
                 // Get newsPic Dir's path
-                Path newsPicDir = Paths.get("./src/main/resources/static/img/newsPic/");
+                Path newsPicDir = Paths.get("./src/main/resources/static/img/newsPic");
 //                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
 //                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/"
                 String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), filename).toString();
@@ -146,7 +144,7 @@ public class LabController {
                 stream.close();
             }
             catch (Exception e) {
-                System.out.println(e.getMessage());
+                logger.error(e.getMessage());
 
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }

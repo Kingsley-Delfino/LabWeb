@@ -68,7 +68,7 @@ function uploadfiles(id) {
         var newfilename = id + "_" + i+type;
 
         formdata.append("name",newfilename);
-        console.log(newfilename)
+        // console.log(newfilename)
         $.ajax({
             async:false,
             url: "/uploadFile",

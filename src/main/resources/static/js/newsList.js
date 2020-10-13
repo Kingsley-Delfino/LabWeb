@@ -11,7 +11,9 @@ $.ajax({
 
         for(var i in d)
         {
-            text += "<li class=\"list-group-item\"><a title='"+ d[i].content +"' data-toggle=\"modal\" data-target=\"#newsInfo\" onclick=changeNewsInfo(this,"+d[i].newsid+")>"+d[i].title +"</a><small>"+ d[i].pubdate +"</small></li>"
+            // title 最后需要有空格
+            const title = d[i].title.substr(-1) === ' ' ? d[i].title : `${d[i].title} `;
+            text += "<li class=\"list-group-item\"><a title='"+ d[i].content +"' data-toggle=\"modal\" data-target=\"#newsInfo\" onclick=changeNewsInfo(this,"+d[i].newsid+")>"+ title +"</a><small>"+ d[i].pubdate +"</small></li>"
 
 
         }

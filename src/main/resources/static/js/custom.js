@@ -196,14 +196,10 @@ $(function(){
                 autoplaySpeed: 2000,
                 lazyLoad: 'ondemand',
             });
-            $('.heading > p').css("max-height","200px");
+            $('.heading > p').css("max-height","200px").css("word-break", "break-all");
         }
 
-
-
-
-
-    })
+    });
 
 
 
@@ -237,7 +233,7 @@ $(function(){
             console.log( xhr );
         },
         success:function (d) {
-            console.log(d)
+            // console.log(d)
             var text = ""
             for(var i=0;i<10;i++){
                 text+="          <li class=\"list-group-item\">\n" +
@@ -272,7 +268,7 @@ function changeNewsInfo(news,newsID) {
             var text="";
             text+=$(news).parent().next().next().next().html();
             // text=text.replace(reg,"\n")
-            console.log(text)
+            // console.log(text)
             text+="<br />";
             text+="<div style='text-align: center'>"
             for(var i in d){
@@ -282,8 +278,6 @@ function changeNewsInfo(news,newsID) {
             $("#newsInfo > div  >div > .modal-header > h4").html($(news).html());
             $("#newsInfo > div  >div > .modal-body > p").html(text);
         }
-
-
 
     })
 }
