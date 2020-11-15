@@ -7,9 +7,9 @@ $.ajax({
         console.log( xhr );
     },
     success:function (d) {
-        var text = "";
+        let text = "";
 
-        for(var i in d)
+        for(let i in d)
         {
             // title 最后需要有空格
             const title = d[i].title.substr(-1) === ' ' ? d[i].title : `${d[i].title} `;
@@ -20,10 +20,10 @@ $.ajax({
         $("#newsList>.list-group").html(text);
     }
 
-})
+});
 
 function changeNewsInfo(news,newsID) {
-    var initext="";
+    let initext="";
     $("#newsInfo > div  >div > .modal-header > h4").html(initext);
     $("#newsInfo > div  >div > .modal-body > p").html(initext);
     $.ajax({
@@ -36,11 +36,11 @@ function changeNewsInfo(news,newsID) {
             console.log( xhr );
         },
         success:function (d) {
-            var text="";
+            let text="";
             text+=$(news).attr("title");
             text+="<br />";
             text+="<div style='text-align: center'>"
-            for(var i in d){
+            for(let i in d){
                 text+= "<img class='newsInfoPic' src='img/newsPic/"+ d[i].filename +"'>"
             }
             text +="</div>"
