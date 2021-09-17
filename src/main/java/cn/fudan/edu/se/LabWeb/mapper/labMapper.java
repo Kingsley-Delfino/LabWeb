@@ -45,7 +45,7 @@ public interface labMapper {
 //    @Select("select * from USERINFO_copy where USERTYPE = 'tea' AND STATE = 'T'")
 //    List<labMember> getByLabMemberTea();
 
-    @Select("select * from MEMBER ORDER BY TYPE, GRADE")
+    @Select("select * from MEMBER where GRADUATED = '0' ORDER BY TYPE, GRADE")
     List<nowMember> getMemberByWay();
 
     @Select("select * from NEWSINFO_copy1 ORDER BY PUBDATE DESC limit 6")
