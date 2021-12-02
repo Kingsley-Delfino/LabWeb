@@ -1,5 +1,7 @@
 package cn.fudan.edu.se.LabWeb.controller;
 
+import java.io.*;
+
 import cn.fudan.edu.se.LabWeb.domain.*;
 import cn.fudan.edu.se.LabWeb.service.LabService;
 import org.apache.ibatis.annotations.Param;
@@ -10,9 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+
 import javax.annotation.Resource;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -100,12 +102,16 @@ public class LabController {
 
     @RequestMapping("/insertNewsInfo")
     public String insertNewsInfo(@Param("title") String title, @Param("CONTENT") String CONTENT, @Param("ICON") String ICON, @Param("PUBDATE") String PUBDATE) {
+        String text = "title:" + title + "___content:" + CONTENT + "___icon:" + ICON + "___pubdate" + PUBDATE;
         return labService.insertNewsInfo(title, CONTENT, ICON, PUBDATE);
     }
 
+
     @Controller
-    public static class MainController {
+    public class MainController {
+
         Logger logger = LoggerFactory.getLogger(MainController.class);
+
 
         /**
          * POST /uploadFile -> receive and locally save a file.
@@ -119,25 +125,44 @@ public class LabController {
          */
         @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
         @ResponseBody
-        public ResponseEntity<?> uploadFile(@RequestParam("uploadfile") MultipartFile uploadfile, @RequestParam("name") String name) {
+        public ResponseEntity<?> uploadFile(
+                @RequestParam("uploadfile") MultipartFile uploadfile,@RequestParam("name")String name) {
+
             try {
+                // Get the filename and build the local file path
+                String filename = name;
+                // Get newsPic Dir's path
                 Path newsPicDir = Paths.get("./src/main/resources/static/img/newsPic");
-                String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), name).toString();
-                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(filepath));
+//                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
+//                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/"
+                String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), filename).toString();
+
+                // Save the file locally
+                BufferedOutputStream stream =
+                        new BufferedOutputStream(new FileOutputStream(new File(filepath)));
                 stream.write(uploadfile.getBytes());
                 stream.close();
             }
             catch (Exception e) {
                 logger.error(e.getMessage());
+
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(HttpStatus.OK);
-        }
-    }
+        } // method uploadFile
+
+    } // class MainController
+
 
     @RequestMapping("/insertNewsInfoPic")
-    public int insertNewsInfoPic(@Param("NEWSID") String NEWSID, @Param("FILENAME") String FILENAME) {
+    public int insertNewsInfoPic(@Param("NEWSID")String NEWSID,@Param("FILENAME")String FILENAME) {
         System.out.println(NEWSID+" "+FILENAME);
         return labService.insertNewsInfoPic(NEWSID, FILENAME);
     }
+//    @RequestMapping("/getByLabMemberTea")
+//    public List<labMember> getByLabMemberByTea(){
+//        return labMemberService.getlabMemberByTea();
+//    }
+
+
 }
