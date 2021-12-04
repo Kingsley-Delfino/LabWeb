@@ -1,8 +1,9 @@
 package cn.fudan.edu.se.LabWeb.controller;
 
-import java.io.*;
-
-import cn.fudan.edu.se.LabWeb.domain.*;
+import cn.fudan.edu.se.LabWeb.domain.News;
+import cn.fudan.edu.se.LabWeb.domain.NewsPicture;
+import cn.fudan.edu.se.LabWeb.domain.LabMember;
+import cn.fudan.edu.se.LabWeb.domain.Paper;
 import cn.fudan.edu.se.LabWeb.service.LabService;
 import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
@@ -12,12 +13,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-
 import javax.annotation.Resource;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+import java.io.*;
 
 @RestController
 public class LabController {
@@ -25,93 +25,47 @@ public class LabController {
     @Resource
     private LabService labService;
 
-    @RequestMapping("/r")
-    public List<labMember> getByLabMemberNAME() {
-        return labService.getlabMemberByNAME();
+    @RequestMapping("/getLabMemberByGroup")
+    public List<LabMember> getLabMemberByGroup() {
+        return labService.getLabMemberByGroup();
     }
 
-    @RequestMapping("/getByLabMemberDoc")
-    public List<labMember> getByLabMemberDoc() {
-        return labService.getlabMemberByDoc();
+    @RequestMapping("/getAllNews")
+    public List<News> getAllNews() {
+        return labService.getAllNews();
     }
 
-    @RequestMapping("/getByLabMemberPostGraduate")
-    public List<labMember> getByLabMemberByPostGraduate() {
-        return labService.getlabMemberByPostGraduate();
+    @RequestMapping("/getNewsPicture")
+    public List<NewsPicture> getNewsPicture(@Param("newsId") String newsId) {
+        return labService.getNewsPicture(newsId);
     }
 
-    @RequestMapping("/getByLabMemberUnGraduate")
-    public List<labMember> getByLabMemberByUnGraduate() {
-        return labService.getlabMemberByUnGraduate();
+    @RequestMapping("/getAllPaper")
+    public List<Paper> getAllPaper() {
+        return labService.getAllPaper();
     }
 
-    @RequestMapping("/getByPaperInter")
-    public List<ourPaper> getByPaperInter() {
-        return labService.getPaperInter();
+    @RequestMapping("/getNewsWithLimit")
+    public List<News> getNewsWithLimit() {
+        return labService.getNewsWithLimit(6);
     }
 
-    @RequestMapping("/getByPaperNation")
-    public List<ourPaper> getByPaperNation() {
-        return labService.getPaperNation();
-    }
 
-    @RequestMapping("/getByPaperTech")
-    public List<ourPaper> getByPaperTech() {
-        return labService.getPaperTech();
-    }
 
-    @RequestMapping("/getByPaperDegree")
-    public List<degreePaper> getByPaperDegree() {
-        return labService.getPaperDegree();
-    }
 
-    @RequestMapping("/getByActivity")
-    public List<activity> getByActivity() {
-        return labService.getAcitvity();
-    }
 
-    @RequestMapping("/getByActivityPicture")
-    public List<activityPic> getActivityPic() {
-        return labService.getActivityPic();
-    }
 
-    @RequestMapping("/getByGraduated")
-    public List<graduated> getGraduated(@Param("GRADUATEDATE") String GRADUATEDATE) {
-        return labService.getGraduated(GRADUATEDATE);
-    }
 
-    @RequestMapping("/getMemberByWay")
-    public List<nowMember> getMemberByWay() {
-        return labService.getMemberByWay();
-    }
 
-    @RequestMapping("/getNewsInfo")
-    public List<newsInfo> getNewsInfo() {
-        return labService.getNewsInfo();
-    }
-
-    @RequestMapping("/getAllNewsInfo")
-    public List<newsInfo> getAllNewsInfo() {
-        return labService.getAllNewsInfo();
-    }
-
-    @RequestMapping("/getNewsInfoPic")
-    public List<newsInfoPic> getNewsInfoPic(@Param("NEWSID") String newsID) {
-        return labService.getNewsInfoPic(newsID);
-    }
 
     @RequestMapping("/insertNewsInfo")
     public String insertNewsInfo(@Param("title") String title, @Param("CONTENT") String CONTENT, @Param("ICON") String ICON, @Param("PUBDATE") String PUBDATE) {
-        String text = "title:" + title + "___content:" + CONTENT + "___icon:" + ICON + "___pubdate" + PUBDATE;
         return labService.insertNewsInfo(title, CONTENT, ICON, PUBDATE);
     }
 
-
     @Controller
-    public class MainController {
-
+    public static class MainController {
         Logger logger = LoggerFactory.getLogger(MainController.class);
-
 
         /**
          * POST /uploadFile -> receive and locally save a file.
@@ -125,44 +79,25 @@ public class LabController {
          */
         @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
         @ResponseBody
-        public ResponseEntity<?> uploadFile(
-                @RequestParam("uploadfile") MultipartFile uploadfile,@RequestParam("name")String name) {
-
+        public ResponseEntity<?> uploadFile(@RequestParam("uploadfile") MultipartFile uploadfile, @RequestParam("name") String name) {
             try {
-                // Get the filename and build the local file path
-                String filename = name;
-                // Get newsPic Dir's path
                 Path newsPicDir = Paths.get("./src/main/resources/static/img/newsPic");
-//                String directory = "/home/fdse/apache-tomcat-8.5.38/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/";
-//                        "/usr/local/apache3day/webapps/LabWeb/WEB-INF/classes/static/img/newsPic/"
-                String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), filename).toString();
-
-                // Save the file locally
-                BufferedOutputStream stream =
-                        new BufferedOutputStream(new FileOutputStream(new File(filepath)));
+                String filepath = Paths.get(newsPicDir.normalize().toAbsolutePath().toString(), name).toString();
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(filepath));
                 stream.write(uploadfile.getBytes());
                 stream.close();
             }
             catch (Exception e) {
                 logger.error(e.getMessage());
-
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(HttpStatus.OK);
-        } // method uploadFile
-
-    } // class MainController
-
+        }
+    }
 
     @RequestMapping("/insertNewsInfoPic")
-    public int insertNewsInfoPic(@Param("NEWSID")String NEWSID,@Param("FILENAME")String FILENAME) {
-        System.out.println(NEWSID+" "+FILENAME);
+    public int insertNewsInfoPic(@Param("NEWSID") String NEWSID, @Param("FILENAME") String FILENAME) {
+        System.out.println(NEWSID + " " + FILENAME);
         return labService.insertNewsInfoPic(NEWSID, FILENAME);
     }
-//    @RequestMapping("/getByLabMemberTea")
-//    public List<labMember> getByLabMemberByTea(){
-//        return labMemberService.getlabMemberByTea();
-//    }
-
-
 }
