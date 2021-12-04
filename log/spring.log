@@ -58,3 +58,67 @@
 2021-12-04 18:45:16.288  INFO 20546 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 2021-12-04 18:45:16.645  INFO 20546 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2021-12-04 18:45:16.867  INFO 20546 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-04 18:54:21.749  WARN 20546 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c1268a0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.749  WARN 20546 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@770ed44c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.751  WARN 20546 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@356336bb (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.751  WARN 20546 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@39d0de2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.752  WARN 20546 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@344e38ef (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.752  WARN 20546 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@20bb3102 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.754  WARN 20546 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@642a7016 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.754  WARN 20546 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f630add (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.755  WARN 20546 --- [http-nio-8080-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2c179d76 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:54:21.755  WARN 20546 --- [http-nio-8080-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@75160363 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2021-12-04 18:57:16.745  INFO 20546 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-04 18:57:16.749  INFO 20546 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-04 18:57:20.993  INFO 20811 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Starting LabWebApplication using Java 1.8.0_271 on nangongxianerdeMacBook-Pro.local with PID 20811 (/Users/kingsley/FDSE/lab-web/target/classes started by kingsley in /Users/kingsley/FDSE/lab-web)
+2021-12-04 18:57:20.996  INFO 20811 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : No active profile set, falling back to default profiles: default
+2021-12-04 18:57:21.962  INFO 20811 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-04 18:57:21.970  INFO 20811 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-04 18:57:21.970  INFO 20811 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-12-04 18:57:22.036  INFO 20811 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-04 18:57:22.037  INFO 20811 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 995 ms
+2021-12-04 18:57:22.417  INFO 20811 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-12-04 18:57:22.506  WARN 20811 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-04 18:57:22.648  INFO 20811 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-04 18:57:22.658  INFO 20811 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Started LabWebApplication in 1.989 seconds (JVM running for 2.675)
+2021-12-04 18:57:32.897  INFO 20811 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-04 18:57:32.898  INFO 20811 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-04 18:57:32.899  INFO 20811 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-04 18:57:33.275  INFO 20811 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-04 18:57:33.480  INFO 20811 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-04 19:02:39.969  INFO 20811 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-04 19:02:39.976  INFO 20811 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-04 19:02:43.585  INFO 20888 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Starting LabWebApplication using Java 1.8.0_271 on nangongxianerdeMacBook-Pro.local with PID 20888 (/Users/kingsley/FDSE/lab-web/target/classes started by kingsley in /Users/kingsley/FDSE/lab-web)
+2021-12-04 19:02:43.587  INFO 20888 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : No active profile set, falling back to default profiles: default
+2021-12-04 19:02:44.472  INFO 20888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-04 19:02:44.486  INFO 20888 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-04 19:02:44.486  INFO 20888 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-12-04 19:02:44.534  INFO 20888 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-04 19:02:44.534  INFO 20888 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 916 ms
+2021-12-04 19:02:44.841  INFO 20888 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-12-04 19:02:44.911  WARN 20888 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-04 19:02:45.004  INFO 20888 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-04 19:02:45.013  INFO 20888 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Started LabWebApplication in 1.709 seconds (JVM running for 2.159)
+2021-12-04 19:02:53.619  INFO 20888 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-04 19:02:53.619  INFO 20888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-04 19:02:53.620  INFO 20888 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-04 19:02:54.085  INFO 20888 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-04 19:02:54.300  INFO 20888 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-04 19:04:16.583  INFO 20888 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-04 19:04:16.589  INFO 20888 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-04 19:04:19.062  INFO 20913 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Starting LabWebApplication using Java 1.8.0_271 on nangongxianerdeMacBook-Pro.local with PID 20913 (/Users/kingsley/FDSE/lab-web/target/classes started by kingsley in /Users/kingsley/FDSE/lab-web)
+2021-12-04 19:04:19.064  INFO 20913 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : No active profile set, falling back to default profiles: default
+2021-12-04 19:04:19.809  INFO 20913 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-04 19:04:19.816  INFO 20913 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-04 19:04:19.817  INFO 20913 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-12-04 19:04:19.865  INFO 20913 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-04 19:04:19.865  INFO 20913 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 771 ms
+2021-12-04 19:04:20.101  INFO 20913 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-12-04 19:04:20.146  WARN 20913 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-12-04 19:04:20.233  INFO 20913 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-04 19:04:20.242  INFO 20913 --- [main] c.fudan.edu.se.LabWeb.LabWebApplication  : Started LabWebApplication in 1.426 seconds (JVM running for 1.977)
+2021-12-04 19:04:30.373  INFO 20913 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-04 19:04:30.373  INFO 20913 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-04 19:04:30.374  INFO 20913 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-04 19:04:30.789  INFO 20913 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-04 19:04:31.240  INFO 20913 --- [http-nio-8080-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
