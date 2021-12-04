@@ -6,9 +6,7 @@
     <title>复旦大学软件工程实验室</title>
     <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-
     <link rel="icon" href="img/Logo.jpg" type="image/x-icon"/>
-    
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -16,6 +14,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="slick/slick.js"></script>
 
     <!-- =======================================================
         Theme Name: Mentor
@@ -34,54 +37,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" width="40px" style="margin-top:-8px"> </span><span>复旦大学软件工程实验室</span></a>
+          <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""></span><span> 复旦大学软件工程实验室</span></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right" style="position: absolute;right: 44%">
-            <li><a href="http://bigcode.fudan.edu.cn" style="padding: 0;margin: 0;margin-top: 15px"><img src="img/icon.jpg" width="40px" style="margin-top: -8px"/>代码大数据与智能化软件开发</a></li>
-            <li><img style="float: right;margin-left:10px" width="60px" src="img/QR.jpg"></li>
+          <ul class="nav navbar-nav navbar-right" style="position: absolute; right: 44%;">
+            <li>
+              <a href="https://bigcode.fudan.edu.cn" style="padding: 0; margin: 15px 0 0;"><img src="img/icon.jpg" style="margin-top: -8px; width: 40px;" alt=""/>代码大数据与智能化软件开发</a>
+            </li>
+            <li>
+              <img style="float: right; margin-left:10px; width: 60px;" src="img/QR.jpg" alt="">
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#feature">实验室动态</a></li>
             <li><a href="#faculity-member">研究团队</a></li>
-            <!--<li><a href="#blog">研究成果</a></li>-->
-           <!-- <li><a href="index.html#communicate">交流与合作</a></li>-->
             <li><a href="#paper-list">论文发表</a></li>
-            <!--<li><a href="activity.html">活动剪影</a></li>-->
-            <!--<li><a href="List.html?list=graduated&grade=2015">毕业生风采</a></li>-->
-            <!--<li><a href="http://bigcode.fudan.edu.cn">代码大数据平台</a></li>-->
           </ul>
         </div>
       </div>
     </nav>
     <!--/ Navigation bar-->
-    <!--Modal box-->
-    <div class="modal fade" id="login" role="dialog">
-      <div class="modal-dialog modal-sm">
-      
-        <!-- Modal content no 1-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-center form-title">Login</h4>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <!--/ Modal box-->
+    
     <!--Banner-->
     <div class="banner">
-
       <div class="bg-color">
         <div class="container">
           <div class="row">
             <div class="banner-text text-center">
               <div class="intro-para text-center quote">
-                <p class="small-text" style="text-align: left; font-size: 18px;margin-bottom: 0;">复旦大学软件工程实验室长期从事软件工程方法、系统软件技术以及软件技术产业化应用等方面的研究和实践工作，现有教授2名、副教授3名、高级讲师1名、讲师1名。</p>
-                <p class="small-text" style="text-align: left;font-size: 18px;">实验室的研究工作主要围绕智能化软件开发、软件开发大数据分析、微服务与智能化运维、泛在计算系统软件四个方面开展。智能化软件开发在代码和文档分析基础上构建软件开发知识图谱、训练代码深度学习模型，以自动问答、代码补全、资源推荐等方式提供智能化的开发支持；软件开发大数据分析在代码、版本库、开发过程及持续集成日志等数据基础上，利用代码静态分析、克隆分析、演化分析、第三方库分析等分析能力建立大数据分析平台，通过数据分析、挖掘和可视化为软件开发效能和质量提升提供支撑；微服务与智能化运维面向基于云平台的微服务应用的开发、部署、运行时支撑及智能化运维技术开展研究；泛在计算系统软件针对智能汽车、智能家居等典型泛在计算场景下的资源软件定义技术、人机物融合应用开发与运行时支撑系统技术开展研究，同时探索以机器人为代表的智能体自主编程与群体智能技术。</p>
-                <p class="small-text" style="text-align: left;font-size: 18px;">实验室的研究工作得到了科技部重点研发计划及863项目、自然科学基金项目的支持。近年来，实验室已经在ICSE、FSE、ASE、CSCW、ICSME、SANER、RE等软件工程领域著名国际会议，IEEE/ACM Transactions等国际期刊，以及中国科学、计算机学报、软件学报、电子学报、计算机研究与发展等国内权威期刊上发表了一系列研究论文，并获得2011年软件维护国际会议（ICSM 2011）最佳论文奖、2018年自动化软件工程国际会议（ASE 2018）ACM SIGSOFT杰出论文奖、2018、2019、2020年软件维护与演化国际会议（ICSME 2018/2019/2020）IEEE TCSE杰出论文奖及软件文档生成挑战赛优胜奖、IEEE Transactions on Software Engineering年度（2018年）最佳论文。实验室研究成果获得全国软件及应用学术会议（NASAC）软件工具原型竞赛一等奖1次、二等奖3次、三等奖1次。实验室还承办了第9届全球化软件工程国际会议（ICGSE 2014）、第33届IEEE软件维护与演化国际会议（ICSME 2017）、第9届网构软件国际会议（Internetware 2017）。</p>
+                <p class="small-text" style="text-align: left; font-size: 18px; margin-bottom: 0;">复旦大学软件工程实验室长期从事软件工程方法、系统软件技术以及软件技术产业化应用等方面的研究和实践工作，现有教授2名、副教授3名、高级讲师1名、讲师1名。</p>
+                <p class="small-text" style="text-align: left; font-size: 18px;">实验室的研究工作主要围绕智能化软件开发、软件开发大数据分析、微服务与智能化运维、泛在计算系统软件四个方面开展。智能化软件开发在代码和文档分析基础上构建软件开发知识图谱、训练代码深度学习模型，以自动问答、代码补全、资源推荐等方式提供智能化的开发支持；软件开发大数据分析在代码、版本库、开发过程及持续集成日志等数据基础上，利用代码静态分析、克隆分析、演化分析、第三方库分析等分析能力建立大数据分析平台，通过数据分析、挖掘和可视化为软件开发效能和质量提升提供支撑；微服务与智能化运维面向基于云平台的微服务应用的开发、部署、运行时支撑及智能化运维技术开展研究；泛在计算系统软件针对智能汽车、智能家居等典型泛在计算场景下的资源软件定义技术、人机物融合应用开发与运行时支撑系统技术开展研究，同时探索以机器人为代表的智能体自主编程与群体智能技术。</p>
+                <p class="small-text" style="text-align: left; font-size: 18px;">实验室的研究工作得到了科技部重点研发计划及863项目、自然科学基金项目的支持。近年来，实验室已经在ICSE、FSE、ASE、CSCW、ICSME、SANER、RE等软件工程领域著名国际会议，IEEE/ACM Transactions等国际期刊，以及中国科学、计算机学报、软件学报、电子学报、计算机研究与发展等国内权威期刊上发表了一系列研究论文，并获得2011年软件维护国际会议（ICSM 2011）最佳论文奖、2018年自动化软件工程国际会议（ASE 2018）ACM SIGSOFT杰出论文奖、2018、2019、2020年软件维护与演化国际会议（ICSME 2018/2019/2020）IEEE TCSE杰出论文奖及软件文档生成挑战赛优胜奖、IEEE Transactions on Software Engineering年度（2018年）最佳论文。实验室研究成果获得全国软件及应用学术会议（NASAC）软件工具原型竞赛一等奖1次、二等奖3次、三等奖1次。实验室还承办了第9届全球化软件工程国际会议（ICGSE 2014）、第33届IEEE软件维护与演化国际会议（ICSME 2017）、第9届网构软件国际会议（Internetware 2017）。</p>
               </div>
             </div>
           </div>
@@ -92,48 +78,42 @@
 
     <!--研究方向-->
     <section id ="courses" >
-
       <div class="container-fluid">
-        <div class="row" style="margin-left: 3%;margin-top: 1%">
-          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0% 4% 4% 0%;">
+        <div class="row" style="margin-left: 3%; margin-top: 1%;">
+          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0 4% 4% 0;">
             <figure class="">
-
               <a href="#" class="wayrooma wayrooma1" data-toggle="modal" data-target="#researchWay1" style="outline:none">
-                <img src="img/course01.jpg" class="img-responsive" >
+                <img src="img/course01.jpg" class="img-responsive"  alt="">
                 <div class="wayroom wayroom1">
-                  <h3 style="font-size: 1.7vw">智能化软件开发</h3>
-                  <p style="margin-top:10px;font-size:1.4vw;">代码大数据平台建设、代码大数据挖掘与可视化、基于深度学习的代码生成式推荐、代码知识图谱及其应用、代码语义搜索、智能化代码缺陷侦测。</p>
-
+                  <h3 style="font-size: 1.7vw;">智能化软件开发</h3>
+                  <p style="margin-top:10px; font-size:1.4vw;">代码大数据平台建设、代码大数据挖掘与可视化、基于深度学习的代码生成式推荐、代码知识图谱及其应用、代码语义搜索、智能化代码缺陷侦测。</p>
                 </div>
               </a>
-
-
             </figure>
           </div>
-          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0% 4% 4% 0%;">
+          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0 4% 4% 0;">
             <figure class="">
-              <a href="#" class="wayrooma wayrooma2" data-toggle="modal" data-target="#researchWay1" style="outline:none">
-                <img src="img/course02.jpg" class="img-responsive" >
+              <a href="#" class="wayrooma wayrooma2" data-toggle="modal" data-target="#researchWay1" style="outline:none;">
+                <img src="img/course02.jpg" class="img-responsive"  alt="">
                 <div class="wayroom wayroom2">
-                  <h3 style="font-size: 1.7vw">移动云计算软件系统</h3>
-                  <p style="margin-top:10px;font-size:1.4vw;">安卓应用交互式协作、面向安卓的最终用户编程技术、安卓应用的智能化语音控制、微服务系统故障分析与运行时自适应、群智协作与人机物融合计算。</p>
+                  <h3 style="font-size: 1.7vw;">移动云计算软件系统</h3>
+                  <p style="margin-top:10px; font-size:1.4vw;">安卓应用交互式协作、面向安卓的最终用户编程技术、安卓应用的智能化语音控制、微服务系统故障分析与运行时自适应、群智协作与人机物融合计算。</p>
                 </div>
               </a>
             </figure>
           </div>
-          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0% 4% 4% 0%;">
+          <div class="col-md-4 col-sm-6 padleft-right" style="padding: 0 4% 4% 0;">
             <figure class="">
               <a href="#" class="wayrooma wayrooma3" data-toggle="modal" data-target="#researchWay1" style="outline:none">
-                <img src="img/course03.jpg" class="img-responsive" >
+                <img src="img/course03.jpg" class="img-responsive"  alt="">
                 <div class="wayroom wayroom3">
                   <h3 style="font-size: 1.7vw">大数据系统及应用</h3>
-                  <p style="margin-top:10px;font-size:1.4vw;">数据开放共享技术与平台、数据交互式可视化及应用、多源异构数据融合与协同、面向领域的大数据智能化应用开发、流式数据实时处理应用开发平台</p>
+                  <p style="margin-top:10px; font-size:1.4vw;">数据开放共享技术与平台、数据交互式可视化及应用、多源异构数据融合与协同、面向领域的大数据智能化应用开发、流式数据实时处理应用开发平台</p>
                 </div>
               </a>
               <a href="#" data-toggle="modal" data-target="#researchWay1" style="outline:none"></a>
             </figure>
           </div>
-
         </div>
       </div>
     </section>
@@ -148,25 +128,9 @@
             <hr class="bottom-line">
           </div>
           <div class="feature-info"></div>
-<!--          <div class="modal fade" id="newsInfo" tabindex="-1" role="dialog" aria-labelledby="newsInfo">-->
-<!--            <div class="modal-dialog" role="document" style="width: 40%">-->
-<!--              <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
-<!--                  <h4 class="modal-title" id="newsInfoTitle" style="text-align: center">赵文耘</h4>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                  <p>1984年毕业于复旦大学计算机科学系，1989年获得硕士学位。从1984年开始在复旦大学任教至今，曾任复旦大学档案馆副馆长、复旦大学校园网管理服务中心主任。现任复旦大学软件工程实验室主任、软件工程一级学科学术带头人、软件工程博士后流动站站长。学术兼职包括中国计算机学会软件工程专业委员会副主任、中国软件行业协会软件工程分会副理事长。研究方向为软件工程、软件开发工具及其环境、企业应用集成（EAI）。自1989年到2000年一直参加国家科技攻关项目“大型软件开发环境青鸟系统”的研制和开发，为复旦大学所承担的各子专题的主要开发人员或子专题负责人。该系统获1998年国家科技进步二等奖，1996年电子工业部科技进步特等奖和1996年三部委联合颁发的荣誉证书。2001年至今作为项目负责人承担了软件构件技术、软件配置管理、软件体系结构等方面的科研项目20多项，其中国家863项目6项、国家自然科学基金项目2项，上海市科委项目3项。参加的863项目“基于Internet以构件库为核心的软件开发平台”和“上海构件库及其应用研究”分别获获得2006年国家科技进步二等奖和2005上海市科技进步二等奖。教学工作方面先后面向计算机及相关专业本科生开设《软件工程》、《软件实践》等课程，为研究生开设《高级软件工程》、《软件复用》、《项目管理》等课程，主持上海市精品课程《软件工程》。获得复旦大学教学名师称号，负责的《“软件工程”课程教学与实践》获2009年上海市教学成果奖二等奖，教学论文分别获得2007年和2008年全国计算机教育优秀论文评比一等奖1项、二等奖2项。</p>-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
         </div>
       </div>
-      <div style="clear: both;text-align: center;"><br><a href="newsList.html">查看更多</a></div>
+      <div style="clear: both; text-align: center;"><br><a href="news.html">查看更多</a></div>
     </section>
     <!--/ 实验室动态-->
 
@@ -180,26 +144,23 @@
           </div>
           <div id="tooltip" class="tip"></div>
           <div class="studyTeam">
-
 <!--赵文耘-->
-          <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">  <!-- 模板中本来是响应式布局类，为了插件的正常使用取消掉了 -->
+          <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">  <!-- 模板中本来是响应式布局类，为了插件的正常使用取消掉了 -->
             <div class="pm-staff-profile-container" >
               <div class="pm-staff-profile-image-wrapper text-center" >
                 <div class="makecircle">
-                  <img src="img/ZhaoWenyun.jpg" alt="图片" class="img-number" style="height: 200px; "/>
+                  <img src="img/ZhaoWenyun.jpg" alt="图片" class="img-number" style="height: 200px;"/>
                 </div>
-
               </div>
               <div class="pm-staff-profile-details text-center">
                 <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-zhaowenyun">赵文耘</a>
                 <p class="pm-staff-profile-title">教授、博士生导师</p>
-
                 <small><a href="mailto:wyzhao@fudan.edu.cn">wyzhao@fudan.edu.cn</a>  </small>
               </div>
             </div>
           </div>
 <!--彭鑫-->
-          <div class="col-lg-4 col-md-4 col-sm-4"style="height: 410px">
+          <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
             <div class="pm-staff-profile-container" >
               <div class="pm-staff-profile-image-wrapper text-center">
                 <div class="makecircle">
@@ -210,12 +171,11 @@
                 <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-pengxin">彭鑫</a>
                 <p class="pm-staff-profile-title">教授、博士生导师</p>
                 <small><a href="mailto:pengxin@fudan.edu.cn">pengxin@fudan.edu.cn</a>  </small>
-
               </div>
             </div>
           </div>
 <!--吴毅坚-->
-            <div class="col-lg-4 col-md-4 col-sm-4"style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -225,14 +185,12 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-wuyijian">吴毅坚</a>
                   <p class="pm-staff-profile-title">副教授</p>
-
-                  <!--<p class="pm-staff-profile-bio1" style="font-size: small;display: none;">2006年毕业于复旦大学计算机科学与工程系，获得理学博士学位，后留校任教，在软件工程实验室从事科研工作。目前研究兴趣主要包括软件体系结构、软件复用和产品线、工业环境中的软件演化等。作为技术骨干参加了多个国家863项目、973项目和自然科学基金等项目的研究工作；目前作为项目负责人承担国家自然科学基金项目一项。在相关国内核心期刊和国际会议发表论文十余篇。长期从事计算机软件的工程化开发和实践，积累了大量工业环境中软件开发的经验。2006年以来向软件工程专业本科生开设了《软件工程》《软件实践》《数据库设计》等专业课程。曾担任软件学院06级本科生班导师，目前担任软件学院10级本科生班导师，兼任复旦学院10202班班导师。 </p>-->
                   <small><a href="mailto:wuyijian@fudan.edu.cn">wuyijian@fudan.edu.cn</a>  </small>
                 </div>
               </div>
             </div>
 <!--沈立炜-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -242,29 +200,27 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-shenliwei">沈立炜</a>
                   <p class="pm-staff-profile-title">副教授</p>
-
                   <small><a href="mailto:shenliwei@fudan.edu.cn">shenliwei@fudan.edu.cn</a>  </small>
                 </div>
               </div>
             </div>
 <!--陈碧欢-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
-                  <img src="img/ChenBihuan.jpg" alt="图片" class="  img-number" style="width: 200px"/>
+                  <img src="img/ChenBihuan.jpg" alt="图片" class="  img-number" style="width: 200px;"/>
                   </div>
                 </div>
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-chenbihuan">陈碧欢</a>
                   <p class="pm-staff-profile-title">副教授</p>
-
                   <small><a href="mailto:bhchen@fudan.edu.cn">bhchen@fudan.edu.cn</a>  </small>
                 </div>
               </div>
             </div>
 <!--沙朝锋-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -274,13 +230,12 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-shachaofeng">沙朝锋</a>
                   <p class="pm-staff-profile-title">副教授</p>
-
                   <small><a href="mailto:cfsha@fudan.edu.cn">cfsha@fudan.edu.cn</a>  </small>
                 </div>
               </div>
             </div>
 <!--戴开宇-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -290,13 +245,12 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-daikaiyu">戴开宇</a>
                   <p class="pm-staff-profile-title">高级讲师</p>
-
                   <small><a href="mailto:kydai@fudan.edu.cn">kydai@fudan.edu.cn</a></small>
                 </div>
               </div>
             </div>
 <!--李弋-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -306,13 +260,12 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-liyi">李弋</a>
                   <p class="pm-staff-profile-title">讲师</p>
-
                   <small><a href="mailto:liy@fudan.edu.cn">liy@fudan.edu.cn</a>  </small>
                 </div>
               </div>
             </div>
 <!--董震-->
-            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px">
+            <div class="col-lg-4 col-md-4 col-sm-4" style="height: 410px;">
               <div class="pm-staff-profile-container" >
                 <div class="pm-staff-profile-image-wrapper text-center">
                   <div class="makecircle">
@@ -322,7 +275,6 @@
                 <div class="pm-staff-profile-details text-center">
                   <a href="#" class="pm-staff-profile-name" data-toggle="modal" data-target="#studyTeamInfo-dongzhen">董震</a>
                   <p class="pm-staff-profile-title">青年副研究员</p>
-
                   <small><a href="mailto:liy@fudan.edu.cn">zhendong@fudan.edu.cn</a>  </small>
                 </div>
               </div>
@@ -331,16 +283,17 @@
           </div>
         </div>
       </div>
-
       <div class="modal fade" id="studyTeamInfo-zhaowenyun" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo1">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo1" style="text-align: center">赵文耘</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo1" style="text-align: center;">赵文耘</h4>
             </div>
             <div class="modal-body">
-              <p>1984年毕业于复旦大学计算机科学系，1989年获得硕士学位。从1984年开始在复旦大学任教至今，曾任复旦大学档案馆副馆长、复旦大学校园网管理服务中心主任。现任复旦大学软件工程实验室主任、软件工程一级学科学术带头人、软件工程博士后流动站站长。学术兼职包括中国计算机学会软件工程专业委员会副主任、中国软件行业协会软件工程分会副理事长。研究方向为软件工程、软件开发工具及其环境、企业应用集成（EAI）。自1989年到2000年一直参加国家科技攻关项目“大型软件开发环境青鸟系统”的研制和开发，为复旦大学所承担的各子专题的主要开发人员或子专题负责人。该系统获1998年国家科技进步二等奖，1996年电子工业部科技进步特等奖和1996年三部委联合颁发的荣誉证书。2001年至今作为项目负责人承担了软件构件技术、软件配置管理、软件体系结构等方面的科研项目20多项，其中国家863项目6项、国家自然科学基金项目2项，上海市科委项目3项。参加的863项目“基于Internet以构件库为核心的软件开发平台”和“上海构件库及其应用研究”分别获获得2006年国家科技进步二等奖和2005上海市科技进步二等奖。教学工作方面先后面向计算机及相关专业本科生开设《软件工程》、《软件实践》等课程，为研究生开设《高级软件工程》、《软件复用》、《项目管理》等课程，主持上海市精品课程《软件工程》。获得复旦大学教学名师称号，负责的《“软件工程”课程教学与实践》获2009年上海市教学成果奖二等奖，教学论文分别获得2007年和2008年全国计算机教育优秀论文评比一等奖1项、二等奖2项。</p>
+              <p>
+                1984年毕业于复旦大学计算机科学系，1989年获得硕士学位。从1984年开始在复旦大学任教至今，曾任复旦大学档案馆副馆长、复旦大学校园网管理服务中心主任。现任复旦大学软件工程实验室主任、软件工程一级学科学术带头人、软件工程博士后流动站站长。学术兼职包括中国计算机学会软件工程专业委员会副主任、中国软件行业协会软件工程分会副理事长。研究方向为软件工程、软件开发工具及其环境、企业应用集成（EAI）。自1989年到2000年一直参加国家科技攻关项目“大型软件开发环境青鸟系统”的研制和开发，为复旦大学所承担的各子专题的主要开发人员或子专题负责人。该系统获1998年国家科技进步二等奖，1996年电子工业部科技进步特等奖和1996年三部委联合颁发的荣誉证书。2001年至今作为项目负责人承担了软件构件技术、软件配置管理、软件体系结构等方面的科研项目20多项，其中国家863项目6项、国家自然科学基金项目2项，上海市科委项目3项。参加的863项目“基于Internet以构件库为核心的软件开发平台”和“上海构件库及其应用研究”分别获获得2006年国家科技进步二等奖和2005上海市科技进步二等奖。教学工作方面先后面向计算机及相关专业本科生开设《软件工程》、《软件实践》等课程，为研究生开设《高级软件工程》、《软件复用》、《项目管理》等课程，主持上海市精品课程《软件工程》。获得复旦大学教学名师称号，负责的《“软件工程”课程教学与实践》获2009年上海市教学成果奖二等奖，教学论文分别获得2007年和2008年全国计算机教育优秀论文评比一等奖1项、二等奖2项。
+              </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -349,17 +302,17 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-pengxin" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo2">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo2" style="text-align: center">彭鑫</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo2" style="text-align: center;">彭鑫</h4>
             </div>
             <div class="modal-body">
               <p>
                 复旦大学计算机科学技术学院副院长、软件学院副院长、教授、博士生导师。中国计算机学会软件工程专委会副主任，上海市计算机学会青工委主任，《Journal of Software: Evolution and Process》联合主编，《ACM Transactions on Software Engineering and Methodology》编委，《软件学报》编委，《Empirical Software Engineering》编委，IEEE软件维护与演化国际会议（ICSME）执委（2017-2020）。2001年毕业于复旦大学计算机科学与工程系，获学士学位。2006年复旦大学计算机科学与工程系软件与理论专业研究生毕业，获博士学位。2013年入选复旦大学卓学计划，2016年获得东软-NASAC青年软件创新奖。主要研究方向包括软件开发大数据分析、智能化软件开发、云原生与智能化运维、泛在计算软件系统等。在ICSE、FSE、ASE、CSCW、ICSME、SANER、RE等软件工程及相关领域高水平国际会议及IEEE/ACM Transactions等国际期刊发表论文80余篇。研究工作获得ICSM 2011最佳论文奖、ACM SIGSOFT杰出论文奖（ASE 2018）、IEEE TCSE杰出论文奖（ICSME 2018/2019/2020）、IEEE Transactions on Software Engineering年度最佳论文奖（2018）。担任ICGSE 2014及ICSME 2017组委会主席、Internetware 2017及ICSR 2019程序委员会主席，以及ICSE、FSE、ASE、ICSME、SANER、RE等会议程序委员会委员。带领复旦大学CodeWisdom研究团队开展软件开发大数据分析平台以及智能化软件开发平台的研究与实践，研究成果在多家大型企业进行了实践应用。
                 <br>
-                个人主页：<a href="http://cspengxin.github.io" >http://cspengxin.github.io</a>
+                个人主页：<a href="https://cspengxin.github.io" >https://cspengxin.github.io</a>
               </p>
             </div>
             <div class="modal-footer">
@@ -369,14 +322,16 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-wuyijian" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo3">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo3" style="text-align: center">吴毅坚</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo3" style="text-align: center;">吴毅坚</h4>
             </div>
             <div class="modal-body">
-              <p>2006年毕业于复旦大学计算机科学与工程系，获得理学博士学位，后留校任教，在软件工程实验室从事科研工作。目前研究兴趣主要包括软件体系结构、软件复用和产品线、工业环境中的软件演化等。作为技术骨干参加了多个国家863项目、973项目和自然科学基金等项目的研究工作；目前作为项目负责人承担国家自然科学基金项目一项。在相关国内核心期刊和国际会议发表论文十余篇。长期从事计算机软件的工程化开发和实践，积累了大量工业环境中软件开发的经验。2006年以来向软件工程专业本科生开设了《软件工程》《软件实践》《数据库设计》等专业课程。曾担任软件学院06级本科生班导师，目前担任软件学院10级本科生班导师，兼任复旦学院10202班班导师。</p>
+              <p>
+                2006年毕业于复旦大学计算机科学与工程系，获得理学博士学位，后留校任教，在软件工程实验室从事科研工作。目前研究兴趣主要包括软件体系结构、软件复用和产品线、工业环境中的软件演化等。作为技术骨干参加了多个国家863项目、973项目和自然科学基金等项目的研究工作；目前作为项目负责人承担国家自然科学基金项目一项。在相关国内核心期刊和国际会议发表论文十余篇。长期从事计算机软件的工程化开发和实践，积累了大量工业环境中软件开发的经验。2006年以来向软件工程专业本科生开设了《软件工程》《软件实践》《数据库设计》等专业课程。曾担任软件学院06级本科生班导师，目前担任软件学院10级本科生班导师，兼任复旦学院10202班班导师。
+              </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -385,14 +340,16 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-shenliwei" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo4">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo4" style="text-align: center">沈立炜</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo4" style="text-align: center;">沈立炜</h4>
             </div>
             <div class="modal-body">
-              <p>2004年于复旦大学计算机科学与工程系获学士学位，2009年曾在美国北卡罗莱纳大学夏洛特分校进行半年学术访问，2010年在复旦大学计算机科学技术学院计算机软件与理论专业获得博士学位，后留校任教。主要研究方向为软件复用、软件产品线、自适应软件系统以及移动应用开发技术。现承担一项国家自然科学基金项目，并作为技术骨干参与多项国家863项目与自然科学基金的研究，在国内外会议或期刊上发表二十余篇论文。当前承担计算机科学技术学院《软件工程》与《软件工程化开发》，以及软件学院《软件测试》与《软件需求工程》的教学工作。 </p>
+              <p>
+                2004年于复旦大学计算机科学与工程系获学士学位，2009年曾在美国北卡罗莱纳大学夏洛特分校进行半年学术访问，2010年在复旦大学计算机科学技术学院计算机软件与理论专业获得博士学位，后留校任教。主要研究方向为软件复用、软件产品线、自适应软件系统以及移动应用开发技术。现承担一项国家自然科学基金项目，并作为技术骨干参与多项国家863项目与自然科学基金的研究，在国内外会议或期刊上发表二十余篇论文。当前承担计算机科学技术学院《软件工程》与《软件工程化开发》，以及软件学院《软件测试》与《软件需求工程》的教学工作。
+              </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -401,14 +358,16 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-chenbihuan" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo5">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo5" style="text-align: center">陈碧欢</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo5" style="text-align: center;">陈碧欢</h4>
             </div>
             <div class="modal-body">
-              <p>2014年毕业于复旦大学计算机科学技术学院，获得理学博士学位。2014年至2017年在新加坡南洋理工大学计算机科学与工程系任职博士后研究员。2017年加入复旦大学计算机科学技术学院。目前的主要研究方向是软件工程、程序分析、软件测试、以及软件安全。至今已在ICSE、FSE、ASE、S&P、CCS、TSE、TIFS、TSC等国际会议和国际期刊上发表研究论文20余篇，并获得了2015年上海市研究生优秀成果（博士学位论文）奖、以及第24届基础软件工程国际研讨会（FSE2016）和第33届国际自动化软件工程会议（ASE2018）的ACM SIGSOFT杰出论文奖。<br>个人主页：<a href="https://chenbihuan.github.io">https://chenbihuan.github.io</a> 。</p>
+              <p>
+                2014年毕业于复旦大学计算机科学技术学院，获得理学博士学位。2014年至2017年在新加坡南洋理工大学计算机科学与工程系任职博士后研究员。2017年加入复旦大学计算机科学技术学院。目前的主要研究方向是软件工程、程序分析、软件测试、以及软件安全。至今已在ICSE、FSE、ASE、S&P、CCS、TSE、TIFS、TSC等国际会议和国际期刊上发表研究论文20余篇，并获得了2015年上海市研究生优秀成果（博士学位论文）奖、以及第24届基础软件工程国际研讨会（FSE2016）和第33届国际自动化软件工程会议（ASE2018）的ACM SIGSOFT杰出论文奖。<br>个人主页：<a href="https://chenbihuan.github.io">https://chenbihuan.github.io</a> 。
+              </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -417,11 +376,11 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-shachaofeng" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo8">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo8" style="text-align: center">沙朝锋</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo8" style="text-align: center;">沙朝锋</h4>
             </div>
             <div class="modal-body">
               <p>
@@ -435,11 +394,11 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-daikaiyu" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo6">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo6" style="text-align: center">戴开宇</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo6" style="text-align: center;">戴开宇</h4>
             </div>
             <div class="modal-body">
               <p>
@@ -456,15 +415,15 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-liyi" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo7">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo7" style="text-align: center">李弋</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo7" style="text-align: center;">李弋</h4>
             </div>
             <div class="modal-body">
-              <p>1997年，西安电子科技大学应用数学专业本科；2002年，复旦大学计算机科学工程系硕士；2012年，复旦大学计算机软件与理论博士。硕士毕业后留校，长期主讲 “离散数学(数理逻辑)”、“算法设计与分析”、“计算机系统基础”、“计算机体系结构”和“大数据系统软件实践”等课程。研究方向包括计算机系统结构、算法设计和分析和程序分析等。相关工作发表在计算机相关期刊和会议上论文约20篇，授予专利多个，获上海市科技进步二等奖1项。主持或参与多个科研项目，包括国家自然科学基金、核高基重大专项、863计划、国家重点研发计划、上海市项目、横向项目和重点实验室开放课题等。
-<!--                <br>个人主页：<a href="http://cspengxin.github.io" >http://cspengxin.github.io</a>-->
+              <p>
+                1997年，西安电子科技大学应用数学专业本科；2002年，复旦大学计算机科学工程系硕士；2012年，复旦大学计算机软件与理论博士。硕士毕业后留校，长期主讲 “离散数学(数理逻辑)”、“算法设计与分析”、“计算机系统基础”、“计算机体系结构”和“大数据系统软件实践”等课程。研究方向包括计算机系统结构、算法设计和分析和程序分析等。相关工作发表在计算机相关期刊和会议上论文约20篇，授予专利多个，获上海市科技进步二等奖1项。主持或参与多个科研项目，包括国家自然科学基金、核高基重大专项、863计划、国家重点研发计划、上海市项目、横向项目和重点实验室开放课题等。
               </p>
             </div>
             <div class="modal-footer">
@@ -474,11 +433,11 @@
         </div>
       </div>
       <div class="modal fade" id="studyTeamInfo-dongzhen" tabindex="-1" role="dialog" aria-labelledby="myStudtTeamInfo9">
-        <div class="modal-dialog" role="document" style="width: 40%">
+        <div class="modal-dialog" role="document" style="width: 40%;">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myStudtTeamInfo9" style="text-align: center">董震</h4>
+              <h4 class="modal-title" id="myStudtTeamInfo9" style="text-align: center;">董震</h4>
             </div>
             <div class="modal-body">
               <p>
@@ -494,13 +453,12 @@
           </div>
         </div>
       </div>
-
-      <div style="clear: both;text-align: center;"><br><a href="MemberList.html">学生列表</a></div>
+      <div style="clear: both; text-align: center;"><br><a href="members.html">学生列表</a></div>
 
     </section>
     <!--/ 研究团队-->
 
-
+    <!--论文发表-->
     <section id="paper-list" class="section-padding">
       <div class="container">
         <div class="row">
@@ -510,31 +468,20 @@
           </div>
         </div>
         <ul class="list-group" id="paper-list-ul">
-
         </ul>
-        <div style="text-align: center"><a href="paperList.html">查看更多</a></div>
-
+        <div style="text-align: center;"><a href="papers.html">查看更多</a></div>
       </div>
     </section>
-
+    <!--/ 论文发表-->
+    
     <!--Footer-->
     <footer id="footer" class="footer">
       <div class="container text-center">
-
-
         <p>地址：上海市浦东新区张衡路825号软件楼401-403 邮编：201203 电话：021-51355343</p>
         <p>Copyright 复旦大学软件工程实验室 2010</p>
         <p>Designed by <a href="https://bootstrapmade.com/">Free Bootstrap Themes</a></p>
       </div>
     </footer>
     <!--/ Footer-->
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="slick/slick.js"></script>
-
-    
   </body>
 </html>
