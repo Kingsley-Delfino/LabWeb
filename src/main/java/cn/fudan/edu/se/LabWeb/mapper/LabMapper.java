@@ -13,6 +13,9 @@ public interface LabMapper {
     @Select("select * from NEWSINFO_copy1 ORDER BY PUBDATE DESC;")
     List<News> getAllNews();
 
+    @Select("select * from NEWSINFO_copy1 where TITLE like #{text} ORDER BY PUBDATE DESC;")
+    List<News> getNewsWithText(@Param("text") String text);
+
     @Select("select * from OURPAPERS where TYPE = 'I' ORDER BY YEAR DESC;")
     List<Paper> getAllPaper();
 

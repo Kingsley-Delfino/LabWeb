@@ -24,6 +24,10 @@ public class LabService {
         return labMapper.getAllNews();
     }
 
+    public List<News> getNewsWithText(String text) {
+        return labMapper.getNewsWithText(text);
+    }
+
     public List<NewsPicture> getNewsPicture(String newsId) {
         return labMapper.getNewsPicture(newsId);
     }

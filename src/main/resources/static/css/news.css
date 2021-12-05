@@ -1,0 +1,29 @@
+.searchTool {
+    width: 300px;
+    height: 55px;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 350px;
+}
+
+.searchInput {
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    position: relative;
+}
+
+.searchButton {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    /*background: url("images/topbar.png") no-repeat -2px -99px;*/
+    top: 13px;
+    left: 255px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

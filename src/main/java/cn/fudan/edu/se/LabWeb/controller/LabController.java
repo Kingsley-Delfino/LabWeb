@@ -26,6 +26,11 @@ public class LabController {
         return labService.getAllNews();
     }
 
+    @RequestMapping("/getNewsWithText")
+    public List<News> getNewsWithText(@Param("text") String text) {
+        return labService.getNewsWithText("%" + text + "%");
+    }
+
     @RequestMapping("/getNewsPicture")
     public List<NewsPicture> getNewsPicture(@Param("newsId") String newsId) {
         return labService.getNewsPicture(newsId);
