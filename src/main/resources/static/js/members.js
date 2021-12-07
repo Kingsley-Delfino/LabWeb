@@ -30,8 +30,8 @@ $.ajax({
             else if(d[i].isPhoto==="0") {
                 memberPhoto="default";
             }
-            const tmpMember = "<div class=\"AMember  col-md-3\">\n" +
-                "<img src=\"img/Member/" + memberPhoto +".jpg\" alt=\"照片\" class=\"MemberPhoto\">\n" +
+            const tmpMember = "<div class='AMember  col-md-3'>\n" +
+                "<img src='img/Member/" + memberPhoto +".jpg' alt='照片' class='MemberPhoto'>\n" +
                 "<p>" + d[i].name + "</p>\n" +
                 "<p>" + d[i].grade + "级" + degree + "生</p>\n" +
                 "</div>";
@@ -67,14 +67,21 @@ $.ajax({
                     break;
             }
         }
-        $(".intelInfo").html(textIntel);
-        $(".devInfo").html(textDev);
-        $(".softInfo").html(textSoft);
-        $(".designAndCloneInfo").html(textDesignAndClone);
-        $(".codeInfo").html(textCode);
-        $(".ppInfo").html(textPP);
-        $(".robotInfo").html(textRobot);
-        $(".aiInfo").html(textAI);
-        $(".techInfo").html(textTech);
+        $("#intelInfo").html(textIntel);
+        $("#devInfo").html(textDev);
+        $("#softInfo").html(textSoft);
+        $("#designAndCloneInfo").html(textDesignAndClone);
+        $("#codeInfo").html(textCode);
+        $("#ppInfo").html(textPP);
+        $("#robotInfo").html(textRobot);
+        $("#aiInfo").html(textAI);
+        $("#techInfo").html(textTech);
     }
 })
+
+function selectChange() {
+    const group = document.getElementById($("#selectInput").val())
+    group.scrollIntoView( {
+        behavior: "auto"
+    });
+}

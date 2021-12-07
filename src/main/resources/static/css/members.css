@@ -1,0 +1,17 @@
+.selectTool {
+    width: 200px;
+    height: 55px;
+    text-align: center;
+    padding-top: 10px;
+    padding-right: 350px;
+}
+
+.selectInput {
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    position: relative;
+}

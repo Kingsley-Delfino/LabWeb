@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/memberList.css">
+    <link rel="stylesheet" type="text/css" href="css/members.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <script src="js/jquery.min.js"></script>
@@ -40,9 +40,26 @@
             <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px" alt=""></span><span> 复旦大学软件工程实验室</span></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right" style="position: absolute; right: 20%;">
+                <li>
+                    <label class="selectTool">
+                        <select class="selectInput" id="selectInput" value="intelSoft" onchange="selectChange()">
+                            <option value="intelSoft">云原生与智能化运维组</option>
+                            <option value="dev">智能化软件开发组</option>
+                            <option value="code">代码大数据分析平台组</option>
+                            <option value="soft">代码分析与优化组</option>
+                            <option value="designAndClone">软件设计与克隆分析组</option>
+                            <option value="pp">人机物融合智能组</option>
+                            <option value="robot">机器人软件工程组</option>
+                            <option value="ai">AI系统工程组</option>
+                            <option value="tech">程序分析技术组</option>
+                        </select>
+                    </label>
+                </li>
+            </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.html#feature">实验室动态</a></li>
-                <li><a href="index.html#faculity-member">研究团队</a></li>
+                <li><a href="index.html#faculty-member">研究团队</a></li>
                 <li><a href="index.html#paper-list">论文发表</a></li>
             </ul>
         </div>
@@ -50,58 +67,58 @@
 </nav>
 
 <div id="MemberList">
-    <div class="intelSoft">
+    <section id="intelSoft" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">云原生与智能化运维组</h2>
-        <div class="intelInfo"></div>
-    </div>
+        <div id="intelInfo"></div>
+    </section>
 
     <div class="clear"></div>
-    <div class="dev">
+    <section id="dev" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">智能化软件开发组</h2>
-        <div class="devInfo"></div>
-    </div>
+        <div id="devInfo"></div>
+    </section>
 
     <div class="clear"></div>
-    <div class="code">
+    <section id="code" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">代码大数据分析平台组</h2>
-        <div class="codeInfo"></div>
-    </div>
+        <div id="codeInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="soft">
+    <section id="soft" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">代码分析与优化组</h2>
-        <div class="softInfo"></div>
-    </div>
+        <div id="softInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="designAndClone">
+    <section id="designAndClone" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">软件设计与克隆分析组</h2>
-        <div class="designAndCloneInfo"></div>
-    </div>
+        <div id="designAndCloneInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="pp">
+    <section id="pp" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">人机物融合智能组</h2>
-        <div class="ppInfo"></div>
-    </div>
+        <div id="ppInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="robot">
+    <section id="robot" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">机器人软件工程组</h2>
-        <div class="robotInfo"></div>
-    </div>
+        <div id="robotInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="ai">
+    <section id="ai" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">AI系统工程组</h2>
-        <div class="aiInfo"></div>
-    </div>
+        <div id="aiInfo"></div>
+    </section>>
 
     <div class="clear"></div>
-    <div class="tech">
+    <section id="tech" class="section-padding">
         <h2 style="text-align: center; margin-bottom: 30px;">程序分析技术组</h2>
-        <div class="techInfo"></div>
-    </div>
+        <div id="techInfo"></div>
+    </section>>
 </div>
 </body>
 </html>
