@@ -1,29 +1,34 @@
 .searchTool {
-    width: 300px;
+    width: 200px;
     height: 55px;
     text-align: center;
-    padding-top: 10px;
-    padding-right: 350px;
+    padding-top: 12px;
+    padding-right: 280px;
 }
 
 .searchInput {
-    width: 300px;
-    height: 40px;
-    border-radius: 15px;
+    width: 200px;
+    height: 36px;
+    border-radius: 12px;
     outline: none;
     border: 1px solid #ccc;
-    padding-left: 10px;
+    padding-left: 15px;
     position: relative;
+    font-size: medium;
 }
 
 .searchButton {
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
     position: absolute;
-    /*background: url("images/topbar.png") no-repeat -2px -99px;*/
+    background: transparent;
     top: 13px;
-    left: 255px;
+    left: 155px;
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.searchButton>img {
+    width: 32px;
 }

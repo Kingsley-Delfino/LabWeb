@@ -19,9 +19,9 @@ const index = function () {
     });
 
     const _index = function () {
-        $("#searchButton").click(function () {
+        let searchButton = $("#searchButton");
+        searchButton.click(function () {
             const text = $("#searchInput").val();
-            console.log(text);
             $.ajax({
                 url:"/getNewsWithText",
                 data:{"text":text},
@@ -35,16 +35,31 @@ const index = function () {
                     let context = "";
                     for(let i in d)
                     {
-                        console.log(d[i]);
                         const title = d[i].title.substr(-1) === ' ' ? d[i].title : `${d[i].title} `;
                         context += "<li class='list-group-item'><a title='"+ d[i].content +"' data-toggle='modal' data-target='#newsInfo' onclick=changeNewsInfo(this,"+d[i].newsId+")>"+ title +"</a><small>"+ d[i].pubDate +"</small></li>"
                     }
                     if(d.length === 0) {
-                        context += "无";
+                        context += "<div style='text-align: center;'>未搜索到匹配内容。。。</div>";
                     }
                     $("#newsList>.list-group").html(context);
                 }
             });
+        });
+
+        searchButton.mouseenter(function () {
+            document.getElementById("searchIcon").src = "../img/icon/search_enter.png";
+        });
+
+        searchButton.mouseleave(function () {
+            document.getElementById("searchIcon").src = "../img/icon/search_normal.png";
+        });
+
+        searchButton.mousedown(function () {
+            document.getElementById("searchIcon").src = "../img/icon/search_click.png";
+        });
+
+        searchButton.mouseup(function () {
+            document.getElementById("searchIcon").src = "../img/icon/search_enter.png";
         });
     };
 
