@@ -29,7 +29,7 @@ table {
 	border-spacing: 0;
 }
 .section-padding{
-	padding: 60px 0px;
+	padding-top: 60px;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Open Sans, sans-serif;
@@ -875,7 +875,6 @@ Responsive media queries
 }
 
 .hide-text {
-    font: 0/0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
@@ -889,10 +888,6 @@ Responsive media queries
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-@-ms-viewport {
-    width: device-width;
 }
 
 .hidden {
@@ -2049,7 +2044,7 @@ section#blog2 {
     border-radius: 100%;
 }
 
-#faculity-member{
+#faculty-member{
     background-color: #f2f2f2;
 }
 #paper-list{
@@ -2127,7 +2122,7 @@ section#blog2 {
     background-repeat: repeat-x;
     border: 1px solid #ddd;
     *border: 0;
-    border-color: none;
+    /*border-color: none;*/
 }
 
 .accordion-heading a{

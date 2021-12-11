@@ -29,6 +29,6 @@
     cursor: pointer;
 }
 
-.searchButton>img {
+.searchButton>.img {
     width: 32px;
 }

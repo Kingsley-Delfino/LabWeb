@@ -1,4 +1,4 @@
-const index = function () {
+const news = function () {
     $.ajax({
         url:"/getAllNews",
         type:"post",
