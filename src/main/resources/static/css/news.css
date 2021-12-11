@@ -3,7 +3,7 @@
     height: 55px;
     text-align: center;
     padding-top: 12px;
-    padding-right: 280px;
+    padding-right: 350px;
 }
 
 .searchInput {
@@ -29,6 +29,6 @@
     cursor: pointer;
 }
 
-.searchButton>.img {
+.searchButton>img {
     width: 32px;
 }

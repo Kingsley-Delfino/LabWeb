@@ -2122,7 +2122,6 @@ section#blog2 {
     background-repeat: repeat-x;
     border: 1px solid #ddd;
     *border: 0;
-    /*border-color: none;*/
 }
 
 .accordion-heading a{
