@@ -1,40 +1,140 @@
-# LabWeb 部署注意事项
+## FDSE
 
-1. 打包
+### 一、 命名规范
 
-    打包需要有以下文件，之前的项目没有配置 WebRoot 目录，因此打包出现问题。
+**0. 通用规则**
 
-    ![img](./imgs/deploy-1.png)
+- 名称只能由字母、数字、下划线、$符号组成
 
-    这里我们配置 Directory Content 指向 static 文件夹，此时该文件夹就是 WebRoot 目录。
+- 不能以数字开头
 
-2. docker-compose
+- 不能使用JAVA中的关键字和保留字
 
-    我们使用 version 3 的语法编写 `docker-compose.yml`，因此服务器 docker 的版本应大于 19.0.0，docker-compose 的版本应大于 1.24.0，之前服务器这些应用的版本太低，需要离线更新（服务器只接校内网，无法访问外网，因此离线更新）
+- 不允许出现中文及拼音命名
 
-3. docker 镜像
+**1. 包名：尽量一个单词，名词，全部小写**
 
-    docker 容器需要使用 tomcat:10, mysql:latest 等镜像，因此需要离线下载这些镜像：在本地下载并打包后上传到服务器再解压：
+例：
+~~~~
+｜——src
+    ｜——controller
+    ｜——service
+    ｜——dao
+~~~~
+**2. 类名：大驼峰命名法，名词**
+
+**3. 属性名：小驼峰命名法，名词**
+
+**4. 方法名：小驼峰命名法，动词开头，反映实际操作的对象和过程**
+
+**5. 变量名：小驼峰命名法，名词。若为基本数据类型，则反映其作用；若为封装类的对象，则保留其类名，并添加修饰词表明其类别**
+
+**6. 常量名：名词，全部大写，单词中间用下划线间隔**
+
+例：
+~~~~
+class Person {  //类名
+    private String name = new String("");   //属性名
+    private int age = 0;   //属性名
+    private static final int EYES_NUMBER = 2;   //常量名
+    public int addAge(int years) {  //方法名
+        if (years >= 0) {
+            this.age += years;
+        }
+        return this.age;
+    }
+    public static void main(String[] args) {
+        List<Person> personList = new ArrayList<>();    //变量名，封装类对象的集合
+        Person tomPerson = new Person();    //变量名，封装类的对象
+        int newTomAge = tomPerson.addAge(10);   //变量名，基本数据类型
+    }
+}
+~~~~
+
+**7. API：小驼峰命名法，尽量一个单词，尽量名词**
+
+### 二、 注释规范
+
+**1. 类注释**
+
+~~~~
+/**
+* Copyright (C)
+* FileName: 文件名
+*
+* 类的详细说明
+*
+* @author 类创建者姓名
+* @Date 创建日期
+* @version 1.00
+*/
+~~~~
+
+**2. 属性注释**
+
+~~~~
+/** 提示信息 */
+~~~~
+
+**3. 方法注释**
+
+~~~~
+/**
+*
+* 类方法的详细使用说明
+*
+* @param 参数1 参数1的使用说明
+* @return 返回结果的说明
+* @throws 注明从此类方法中抛出的异常
+*/
+~~~~
+
+**4. 方法内部注释**
+
+~~~~
+//提示信息
+~~~~
+
+例：
+~~~~
+/**
+*
+* 定义人的类，其中包括姓名、年龄和眼睛的数量，其中眼睛数量为类属性
+*
+* @author 张纪跃
+* @Date 2021年4月21日
+* @version 1.00
+*/
+class Person {
+
+    /** 姓名 */
+    private String name = new String("");
     
-    - 打包
-    ```bash
-    docker save -o tomcat-10.tar tomcat:10
-    ```
-    - 解压
-    ```bash
-    docker load -i tomcat-10.tar
-    ```
-
-4. tomcat 端口
-
-    tomcat 默认启动端口是 8080，若想服务器 80 端口与 8080 端口映射，需要在 `docker-compose.yml` 文件中配置：
-
-    ```yml
-    # 映射容器80端口到本地8080端口
-    ports:
-      - "80:8080"
-    ```
-
-5. tomcat 域名根目录
-
-    我们打包的 war 应用需要放在 tomcat 的 webapps 目录，因此webapps 就是域名根目录，此时我们需要访问 `http://<ip>/<war包名>` URL 才能访问网站，如果我们想直接 访问 `http://<ip>/` 访问网站，则必须修改域名根目录，**或者** 将 war 包名改成 `ROOT`（ tomcat 默认的根路径是 `ROOT` ）。
+    /** 年龄 */
+    private int age = 0;
+    
+    /** 眼睛数量 */
+    private static final int EYES_NUMBER = 2;
+    
+    /**
+    *
+    * 增加年龄
+    *
+    * @param years 需要增加的年数
+    * @return 返回新的年龄
+    */
+    public int addAge(int years) {
+        if (years >= 0) {
+            this.age += years;
+        }
+        return this.age;
+    }
+    
+    public static void main(String[] args) {
+        List<Person> personList = new ArrayList<>();
+        Person tomPerson = new Person();
+        //新的年龄
+        int newTomAge = tomPerson.addAge(10);
+    }
+}
+~~~~
