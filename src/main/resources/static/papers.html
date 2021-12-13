@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/papers.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <script src="js/jquery.min.js"></script>
@@ -29,96 +30,95 @@
 </head>
 <body>
 <!--Navigation bar-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="containerNavbar">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""> </span><span>复旦大学软件工程实验室</span></a>
+<nav class="myNavbar">
+    <div class="navbarContainer">
+        <div class="navbarLeft">
+            <a href="index.html"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""></span><span> 复旦大学软件工程实验室</span></a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html#feature" style="font-size: medium;">实验室动态</a></li>
-                <li><a href="index.html#faculty-member" style="font-size: medium;">研究团队</a></li>
-                <li><a href="index.html#paper-list" style="font-size: medium;">论文发表</a></li>
+        <div class="navbarRight">
+            <ul style="margin-top: 20px;">
+                <li><a href="index.html#feature">实验室动态</a></li>
+                <li><a href="index.html#faculty-member">研究团队</a></li>
+                <li><a href="index.html#paper-list">论文发表</a></li>
             </ul>
         </div>
-<!--        <div class="collapse navbar-collapse" id="myNavbar">-->
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                <li><a href="index.html#feature" style="font-size: medium;">实验室动态</a></li>-->
-<!--                <li><a href="index.html#faculty-member" style="font-size: medium;">研究团队</a></li>-->
-<!--                <li><a href="index.html#paper-list" style="font-size: medium;">论文发表</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
     </div>
 </nav>
-<div style="width: 1140px; margin-top: 100px; margin-left: auto; margin-right: auto;">
-    <div id="chart" style="height:400px;"></div>
+
+<div style="background: #fffffa">
+    <div class="container">
+        <div style="margin-top: 90px;">
+        </div>
+    </div>
 </div>
-<div id="paperList" class="container">
-    <section id="paper2018" class="section-padding">
-        <h2 style="text-align: center;">2018</h2>
-        <ul class="list-group paper2018"></ul>
-    </section>
 
-    <section id="paper2017" class="section-padding">
-        <h2 style="text-align: center;">2017</h2>
-        <ul class="list-group paper2017"></ul>
-    </section>
+<div style="background: #fffffa">
+    <div style="width: 1140px; margin-left: auto; margin-right: auto;">
+        <div id="chart" style="height:400px;"></div>
+    </div>
+</div>
 
-    <section id="paper2016" class="section-padding">
-        <h2 style="text-align: center;">2016</h2>
-        <ul class="list-group paper2016"></ul>
-    </section>
+<div id="paperList">
+    <div class="container">
+        <section id="paper2018" class="section-padding">
+            <h2 style="text-align: center;">2018</h2>
+            <ul class="paper-list paper2018"></ul>
+        </section>
 
-    <section id="paper2015" class="section-padding">
-        <h2 style="text-align: center;">2015</h2>
-        <ul class="list-group paper2015"></ul>
-    </section>
+        <section id="paper2017" class="section-padding">
+            <h2 style="text-align: center;">2017</h2>
+            <ul class="paper-list paper2017"></ul>
+        </section>
 
-    <section id="paper2014" class="section-padding">
-        <h2 style="text-align: center;">2014</h2>
-        <ul class="list-group paper2014"></ul>
-    </section>
+        <section id="paper2016" class="section-padding">
+            <h2 style="text-align: center;">2016</h2>
+            <ul class="paper-list paper2016"></ul>
+        </section>
 
-    <section id="paper2013" class="section-padding">
-        <h2 style="text-align: center;">2013</h2>
-        <ul class="list-group paper2013"></ul>
-    </section>
+        <section id="paper2015" class="section-padding">
+            <h2 style="text-align: center;">2015</h2>
+            <ul class="paper-list paper2015"></ul>
+        </section>
 
-    <section id="paper2012" class="section-padding">
-        <h2 style="text-align: center;">2012</h2>
-        <ul class="list-group paper2012"></ul>
-    </section>
+        <section id="paper2014" class="section-padding">
+            <h2 style="text-align: center;">2014</h2>
+            <ul class="paper-list paper2014"></ul>
+        </section>
 
-    <section id="paper2011" class="section-padding">
-        <h2 style="text-align: center;">2011</h2>
-        <ul class="list-group paper2011"></ul></section>
+        <section id="paper2013" class="section-padding">
+            <h2 style="text-align: center;">2013</h2>
+            <ul class="paper-list paper2013"></ul>
+        </section>
 
-    <section id="paper2010" class="section-padding">
-        <h2 style="text-align: center;">2010</h2>
-        <ul class="list-group paper2010"></ul>
-    </section>
+        <section id="paper2012" class="section-padding">
+            <h2 style="text-align: center;">2012</h2>
+            <ul class="paper-list paper2012"></ul>
+        </section>
 
-    <section id="paper2009" class="section-padding">
-        <h2 style="text-align: center;">2009</h2>
-        <ul class="list-group paper2009"></ul>
-    </section>
+        <section id="paper2011" class="section-padding">
+            <h2 style="text-align: center;">2011</h2>
+            <ul class="paper-list paper2011"></ul></section>
 
-    <section id="paper2008" class="section-padding">
-        <h2 style="text-align: center;">2008</h2>
-        <ul class="list-group paper2008"></ul>
-    </section>
+        <section id="paper2010" class="section-padding">
+            <h2 style="text-align: center;">2010</h2>
+            <ul class="paper-list paper2010"></ul>
+        </section>
 
-    <section id="paperLater" class="section-padding">
-        <h2 style="text-align: center;">2007及以前</h2>
-        <ul class="list-group paperLater"></ul>
-    </section>
+        <section id="paper2009" class="section-padding">
+            <h2 style="text-align: center;">2009</h2>
+            <ul class="paper-list paper2009"></ul>
+        </section>
+
+        <section id="paper2008" class="section-padding">
+            <h2 style="text-align: center;">2008</h2>
+            <ul class="paper-list paper2008"></ul>
+        </section>
+
+        <section id="paperLater" class="section-padding">
+            <h2 style="text-align: center;">2007及以前</h2>
+            <ul class="paper-list paperLater"></ul>
+        </section>
+    </div>
 </div>
 <script type="text/javascript" th:inline="javascript">
     //<![CDATA[

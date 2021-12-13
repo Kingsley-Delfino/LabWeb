@@ -35,7 +35,7 @@ const paper = function () {
             let countLater = 0;
             for(let i in d)
             {
-                let text = "<li class='list-group-item'>\n" +
+                let text = "<li class='paper-list-item'>\n" +
                     "<p style='margin-bottom: 0; color:black;'>"+ d[i].authors +"</p>\n" +
                     "<a href='paper/" + d[i].fileName +"' class='paperListLink' data-toggle='tooltip' data-placement='bottom' title='"+ d[i].abstract +"'>"+ d[i].name +"</a>\n" +
                     "<p style='margin-bottom: 0; color: black;'>"+ d[i].source +"</p>\n" +
@@ -123,12 +123,13 @@ const paper = function () {
 function showChart(xData, yData) {
     const histogramChart = echarts.init(document.getElementById('chart'));
     const option = {
+        backgroundColor: '#fffffa',
         dataZoom: [{
             type: 'slider',
             show: true,
             xAxisIndex: [0],
             start: 0,
-            end: 100
+            end: 100,
         }],
         tooltip: {
             trigger: 'axis',
@@ -137,7 +138,7 @@ function showChart(xData, yData) {
             }
         },
         legend: {
-            data: ["论文发表数量"]
+            data: ["论文发表数量"],
         },
         xAxis: [{
             type: 'category',
@@ -150,7 +151,8 @@ function showChart(xData, yData) {
             name: "论文发表数量",
             type: 'bar',
             stack: 'cloneNode',
-            data: yData
+            data: yData,
+            color: ['#637e39']
         }]
     };
     histogramChart.setOption(option);

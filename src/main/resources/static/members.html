@@ -29,18 +29,13 @@
 </head>
 <body>
 <!--Navigation bar-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="containerNavbar">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px" alt=""></span><span> 复旦大学软件工程实验室</span></a>
+<nav class="myNavbar">
+    <div class="navbarContainer">
+        <div class="navbarLeft">
+            <a href="index.html"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""></span><span> 复旦大学软件工程实验室</span></a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right" style="position: absolute; right: 20%;">
+        <div class="navbarRight">
+            <ul style="position: absolute; right: 30%;">
                 <li>
                     <label class="selectTool">
                         <select class="selectInput" id="selectInput" value="intelSoft" onchange="selectChange()">
@@ -57,68 +52,72 @@
                     </label>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html#feature" style="font-size: medium;">实验室动态</a></li>
-                <li><a href="index.html#faculty-member" style="font-size: medium;">研究团队</a></li>
-                <li><a href="index.html#paper-list" style="font-size: medium;">论文发表</a></li>
+            <ul style="margin-top: 20px;">
+                <li><a href="index.html#feature">实验室动态</a></li>
+                <li><a href="index.html#faculty-member">研究团队</a></li>
+                <li><a href="index.html#paper-list">论文发表</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div id="MemberList">
-    <section id="intelSoft" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">云原生与智能化运维组</h2>
-        <div id="intelInfo"></div>
-    </section>
+<div style="background: #fffffa">
+    <div class="container">
+        <div id="MemberList">
+            <section id="intelSoft">
+                <h2 class="group-title col-md-12">云原生与智能化运维组</h2>
+                <div id="intelInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="dev" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">智能化软件开发组</h2>
-        <div id="devInfo"></div>
-    </section>
+            <div class="clear"></div>
+            <section id="dev" class="section-padding">
+                <h2 class="group-title col-md-12">智能化软件开发组</h2>
+                <div id="devInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="code" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">代码大数据分析平台组</h2>
-        <div id="codeInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="code" class="section-padding">
+                <h2 class="group-title col-md-12">代码大数据分析平台组</h2>
+                <div id="codeInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="soft" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">代码分析与优化组</h2>
-        <div id="softInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="soft" class="section-padding">
+                <h2 class="group-title col-md-12">代码分析与优化组</h2>
+                <div id="softInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="designAndClone" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">软件设计与克隆分析组</h2>
-        <div id="designAndCloneInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="designAndClone" class="section-padding">
+                <h2 class="group-title col-md-12">软件设计与克隆分析组</h2>
+                <div id="designAndCloneInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="pp" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">人机物融合智能组</h2>
-        <div id="ppInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="pp" class="section-padding">
+                <h2 class="group-title col-md-12">人机物融合智能组</h2>
+                <div id="ppInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="robot" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">机器人软件工程组</h2>
-        <div id="robotInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="robot" class="section-padding">
+                <h2 class="group-title col-md-12">机器人软件工程组</h2>
+                <div id="robotInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="ai" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">AI系统工程组</h2>
-        <div id="aiInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="ai" class="section-padding">
+                <h2 class="group-title col-md-12">AI系统工程组</h2>
+                <div id="aiInfo"></div>
+            </section>
 
-    <div class="clear"></div>
-    <section id="tech" class="section-padding">
-        <h2 style="text-align: center; margin-bottom: 30px;">程序分析技术组</h2>
-        <div id="techInfo"></div>
-    </section>>
+            <div class="clear"></div>
+            <section id="tech" class="section-padding">
+                <h2 class="group-title col-md-12">程序分析技术组</h2>
+                <div id="techInfo"></div>
+            </section>
+        </div>
+    </div>
 </div>
 </body>
 </html>

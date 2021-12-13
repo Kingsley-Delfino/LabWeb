@@ -2,8 +2,7 @@
     width: 200px;
     height: 55px;
     text-align: center;
-    padding-top: 12px;
-    padding-right: 350px;
+    padding-top: 13px;
 }
 
 .searchInput {
@@ -11,10 +10,11 @@
     height: 36px;
     border-radius: 12px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid #637e39;
     padding-left: 15px;
     position: relative;
     font-size: medium;
+    color: #637e39;
 }
 
 .searchButton {
@@ -22,13 +22,21 @@
     width: 32px;
     position: absolute;
     background: transparent;
-    top: 13px;
-    left: 155px;
+    top: 14px;
+    left: 245px;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-.searchButton>img {
+.searchButton> img {
     width: 32px;
+}
+
+#newsList {
+    background: #fffffa;
+}
+
+.news-list {
+    margin-top: 80px;
 }

@@ -12,9 +12,9 @@ const news = function () {
             for(let i in d)
             {
                 const title = d[i].title.substr(-1) === ' ' ? d[i].title : `${d[i].title} `;
-                text += "<li class='list-group-item'><a title='"+ d[i].content +"' data-toggle='modal' data-target='#newsInfo' onclick=changeNewsInfo(this,"+d[i].newsId+")>"+ title +"</a><small>"+ d[i].pubDate +"</small></li>"
+                text += "<li class='paper-list-item'><a title='" + d[i].content + "' data-toggle='modal' data-target='#newsInfo' onclick=changeNewsInfo(this," + d[i].newsId+")>" + title + "</a>[" + d[i].pubDate + "]</li>"
             }
-            $("#newsList>.list-group").html(text);
+            $("#newsList>.container>.paper-list").html(text);
         }
     });
 
@@ -36,12 +36,12 @@ const news = function () {
                     for(let i in d)
                     {
                         const title = d[i].title.substr(-1) === ' ' ? d[i].title : `${d[i].title} `;
-                        context += "<li class='list-group-item'><a title='"+ d[i].content +"' data-toggle='modal' data-target='#newsInfo' onclick=changeNewsInfo(this,"+d[i].newsId+")>"+ title +"</a><small>"+ d[i].pubDate +"</small></li>"
+                        context += "<li class='paper-list-item'><a title='" + d[i].content + "' data-toggle='modal' data-target='#newsInfo' onclick=changeNewsInfo(this," + d[i].newsId+")>" + title + "</a><a>[" + d[i].pubDate + "]</a></li>"
                     }
                     if(d.length === 0) {
                         context += "<div style='text-align: center;'>未搜索到匹配内容。。。</div>";
                     }
-                    $("#newsList>.list-group").html(context);
+                    $("#newsList>.container>.paper-list").html(context);
                 }
             });
         });

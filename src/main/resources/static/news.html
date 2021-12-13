@@ -29,18 +29,13 @@
 </head>
 <body>
 <!--Navigation bar-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="containerNavbar">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html" style="font-size: 160%;"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""></span><span> 复旦大学软件工程实验室</span></a>
+<nav class="myNavbar">
+    <div class="navbarContainer">
+        <div class="navbarLeft">
+            <a href="index.html"><span><img src="img/Logo.jpg" style="margin-top:-8px; width: 40px;" alt=""></span><span> 复旦大学软件工程实验室</span></a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right" style="position: absolute; right: 20%;">
+        <div class="navbarRight">
+            <ul style="position: absolute; right: 30%;">
                 <li>
                     <label class="searchTool">
                         <input type="text" class="searchInput" id="searchInput" placeholder="搜索">
@@ -50,37 +45,38 @@
                     </label>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html#feature" style="font-size: medium;">实验室动态</a></li>
-                <li><a href="index.html#faculty-member" style="font-size: medium;">研究团队</a></li>
-                <li><a href="index.html#paper-list" style="font-size: medium;">论文发表</a></li>
+            <ul style="margin-top: 20px;">
+                <li><a href="index.html#feature">实验室动态</a></li>
+                <li><a href="index.html#faculty-member">研究团队</a></li>
+                <li><a href="index.html#paper-list">论文发表</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div id="newsList" class="container">
-    <ul class="list-group"></ul>
-
-    <div class="modal fade" id="newsInfo" tabindex="-1" role="dialog" aria-labelledby="newsInfo">
-        <div class="modal-dialog" role="document" style="width: 40%;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="newsInfoTitle" style="text-align: center">赵文耘</h4>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        1984年毕业于复旦大学计算机科学系，1989年获得硕士学位。从1984年开始在复旦大学任教至今，曾任复旦大学档案馆副馆长、复旦大学校园网管理服务中心主任。现任复旦大学软件工程实验室主任、软件工程一级学科学术带头人、软件工程博士后流动站站长。学术兼职包括中国计算机学会软件工程专业委员会副主任、中国软件行业协会软件工程分会副理事长。研究方向为软件工程、软件开发工具及其环境、企业应用集成（EAI）。自1989年到2000年一直参加国家科技攻关项目“大型软件开发环境青鸟系统”的研制和开发，为复旦大学所承担的各子专题的主要开发人员或子专题负责人。该系统获1998年国家科技进步二等奖，1996年电子工业部科技进步特等奖和1996年三部委联合颁发的荣誉证书。2001年至今作为项目负责人承担了软件构件技术、软件配置管理、软件体系结构等方面的科研项目20多项，其中国家863项目6项、国家自然科学基金项目2项，上海市科委项目3项。参加的863项目“基于Internet以构件库为核心的软件开发平台”和“上海构件库及其应用研究”分别获获得2006年国家科技进步二等奖和2005上海市科技进步二等奖。教学工作方面先后面向计算机及相关专业本科生开设《软件工程》、《软件实践》等课程，为研究生开设《高级软件工程》、《软件复用》、《项目管理》等课程，主持上海市精品课程《软件工程》。获得复旦大学教学名师称号，负责的《“软件工程”课程教学与实践》获2009年上海市教学成果奖二等奖，教学论文分别获得2007年和2008年全国计算机教育优秀论文评比一等奖1项、二等奖2项。
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<section id="newsList">
+    <div class="container">
+        <ul class="paper-list news-list"></ul>
+        <div class="modal fade" id="newsInfo" tabindex="-1" role="dialog" aria-labelledby="newsInfo">
+            <div class="modal-dialog" role="document" style="width: 40%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="description-title">赵文耘</h4>
+                    </div>
+                    <div class="description-body">
+                        <p>
+                            1984年毕业于复旦大学计算机科学系，1989年获得硕士学位。从1984年开始在复旦大学任教至今，曾任复旦大学档案馆副馆长、复旦大学校园网管理服务中心主任。现任复旦大学软件工程实验室主任、软件工程一级学科学术带头人、软件工程博士后流动站站长。学术兼职包括中国计算机学会软件工程专业委员会副主任、中国软件行业协会软件工程分会副理事长。研究方向为软件工程、软件开发工具及其环境、企业应用集成（EAI）。自1989年到2000年一直参加国家科技攻关项目“大型软件开发环境青鸟系统”的研制和开发，为复旦大学所承担的各子专题的主要开发人员或子专题负责人。该系统获1998年国家科技进步二等奖，1996年电子工业部科技进步特等奖和1996年三部委联合颁发的荣誉证书。2001年至今作为项目负责人承担了软件构件技术、软件配置管理、软件体系结构等方面的科研项目20多项，其中国家863项目6项、国家自然科学基金项目2项，上海市科委项目3项。参加的863项目“基于Internet以构件库为核心的软件开发平台”和“上海构件库及其应用研究”分别获获得2006年国家科技进步二等奖和2005上海市科技进步二等奖。教学工作方面先后面向计算机及相关专业本科生开设《软件工程》、《软件实践》等课程，为研究生开设《高级软件工程》、《软件复用》、《项目管理》等课程，主持上海市精品课程《软件工程》。获得复旦大学教学名师称号，负责的《“软件工程”课程教学与实践》获2009年上海市教学成果奖二等奖，教学论文分别获得2007年和2008年全国计算机教育优秀论文评比一等奖1项、二等奖2项。
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <script type="text/javascript" th:inline="javascript">
     //<![CDATA[
     $(document).ready(function() {

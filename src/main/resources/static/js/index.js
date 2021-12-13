@@ -80,9 +80,8 @@ $(function(){
                     "<div class=''> \n" +
                     "<div class='heading pull-right'>\n" +
                     "<h4>" + d[i].title + "</h4>\n" +
-                    "<h4><small>[" + d[i].pubDate + "]</small></h4>\n" +
+                    "<p>[" + d[i].pubDate + "]</p>\n" +
                     "<p>" + content + "</p>\n" +
-                    "<p style='display: none;'>" + d[i].content + "</p>\n" +
                     "</div>\n" +
                     "<div class='fea-img pull-left'>\n" +
                     "<i class='" + d[i].icon + "'></i>\n" +
@@ -114,10 +113,10 @@ $(function(){
         success:function (d) {
             let text = "";
             for(let i = 0; i < 10; i ++){
-                text += "<li class='list-group-item'>\n" +
-                    "<p style='margin-bottom: 0; color:black;'>" + d[i].authors + "</p>\n" +
-                    "<a href='paper/" + d[i].filename + "' class='paperListLink' data-toggle='tooltip' data-placement='bottom' title='" + d[i].abstract +"'>" + d[i].name + "</a>\n" +
-                    "<p style='margin-bottom: 0; color: black'>" + d[i].source + "</p>\n" +
+                text += "<li class='paper-list-item'>\n" +
+                    "<p>" + d[i].authors + "</p>\n" +
+                    "<a href='paper/" + d[i].fileName + "' class='paperListLink' data-toggle='tooltip' data-placement='bottom' title='" + d[i].abstract + "'>" + d[i].name + "</a>\n" +
+                    "<p>" + d[i].source + "</p>\n" +
                     "</li>";
             }
             $("#paper-list-ul").html(text)
