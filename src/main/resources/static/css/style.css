@@ -23,6 +23,7 @@ Navigation Bar
     right: 0;
     left: 0;
     z-index: 1030;
+    border-bottom: 3px solid #637e39;
 }
 
 .navbarContainer{
@@ -84,17 +85,16 @@ Banner
 .quote{
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 18px;
-    color: #eaecdb;
+    color: #ffffde;
     text-align: left;
     margin-top: 110px;
     margin-bottom: 50px;
 }
 
 .banner{
-    background: #8d925a;
-    /*background: url('../img/banner2.jpg') no-repeat center center;*/
+    background: url('../img/banner.jpg') no-repeat center center;
     background-size: cover;
-    opacity:1;
+    opacity: 1;
     position: relative;
 }
 
@@ -256,9 +256,7 @@ Faculty Member
     width: 200px;
     overflow: hidden;
     border-radius: 100%;
-    border-image-width: 5px;
-    border-color: #637e39;
-    border-style: solid;
+    border: 3px solid #637e39;
 }
 
 .modal-dialog {
@@ -284,8 +282,8 @@ Faculty Member
     background-color:white;
     color:black;
     line-height:18px;
-    border:2px groove #0e90d2;
-    padding:3px;
+    border: 2px groove #0e90d2;
+    padding: 3px;
     z-index: 9999; /* 位于最上层 */
     border-radius: 3px;
 }
@@ -298,10 +296,9 @@ Paper
 }
 
 .paper-list {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left:0;
-    margin-bottom:20px;
 }
 
 .paper-list-item {

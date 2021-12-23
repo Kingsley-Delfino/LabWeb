@@ -1,3 +1,8 @@
 #paperList {
     background: #fffffa;
 }
+
+.paper-year {
+    padding-top: 60px;
+    color: #637e39;
+}

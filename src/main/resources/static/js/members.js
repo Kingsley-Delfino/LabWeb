@@ -30,10 +30,14 @@ $.ajax({
             else if(d[i].isPhoto==="0") {
                 memberPhoto="default";
             }
-            const tmpMember = "<div class='AMember  col-md-3'>\n" +
-                "<img src='img/Member/" + memberPhoto +".jpg' alt='照片' class='MemberPhoto'>\n" +
+            const tmpMember = "<div class='aMember  col-md-3'>\n" +
+                "<div class='memberPhoto'>\n" +
+                "<img src='img/Member/" + memberPhoto +".jpg' alt='照片' style='width: 200px;'>\n" +
+                "</div>\n" +
+                "<div class='memberName'>\n" +
                 "<p>" + d[i].name + "</p>\n" +
                 "<p>" + d[i].grade + "级" + degree + "生</p>\n" +
+                "</div>" +
                 "</div>";
             switch (d[i].research) {
                 case "云原生与智能化运维组" :
@@ -80,7 +84,8 @@ $.ajax({
 })
 
 function selectChange() {
-    const group = document.getElementById($("#selectInput").val())
+    let group = document.getElementById($("#selectInput").val());
+    console.log(group.offsetTop);
     group.scrollIntoView( {
         behavior: "auto"
     });

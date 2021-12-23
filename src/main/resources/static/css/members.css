@@ -14,36 +14,40 @@
     padding-left: 15px;
     position: relative;
     font-size: medium;
-}
-
-.selectInput> option {
     color: #637e39;
-}
-
-#MemberList {
     background: #fffffa;
 }
 
+#memberList {
+    background: #fffffa;
+    margin-top: 30px;
+}
+
 .group-title {
-    margin-top: 60px;
+    padding-top: 60px;
     text-align: center;
     font-weight: bold;
     font-size: 25px;
     color: #637e39;
 }
 
-.AMember{
+.aMember{
     text-align: center;
 }
 
-.AMember> p {
+.memberName> p {
     color: #637e39;
 }
 
-.MemberPhoto{
-    width: 10vw;
-    height: 10vw;
+.memberPhoto {
+    margin: auto;
+    width: 200px;
+    height: 200px;
     border-radius: 10%;
-    padding-bottom: 0.5vw;
-    margin-top: 1vw;
+    border: 3px solid #637e39;
+    overflow: hidden;
+}
+.memberName {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
